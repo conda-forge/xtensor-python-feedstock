@@ -12,11 +12,11 @@ source:
     sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 1
 
 requirements:
   run:
-    - xtensor ==0.2.0
+    - xtensor ==0.2.1
     - pybind11 ==1.8.1
 
 test:
