@@ -1,6 +1,6 @@
 {% set name = "xtensor-python" %}
-{% set version = "0.5.0" %}
-{% set sha256 = "b69fb9e8f0bc4fe4f1d391d2698dbfa8420d050daa4102704a9c29fba39b7d60" %}
+{% set version = "0.6.0" %}
+{% set sha256 = "cbc38d6a8b8b4c6a165d226120400bccdba4110c4f92f6e5623fd5215033816e" %}
 
 package:
   name: {{ name|lower }}
@@ -16,7 +16,7 @@ build:
 
 requirements:
   run:
-    - xtensor ==0.5.0
+    - xtensor ==0.7.1
     - pybind11 ==2.0.1
 
 test:
