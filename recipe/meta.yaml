@@ -13,8 +13,11 @@ source:
 
 build:
   number: 0
+  skip: true  # [py<36]
 
 requirements:
+  build:
+    - python
   run:
     - xtensor ==0.7.1
     - pybind11 ==2.0.1
