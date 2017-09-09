@@ -1,6 +1,6 @@
 {% set name = "xtensor-python" %}
-{% set version = "0.12.4" %}
-{% set sha256 = "466164489b13a226fe206a4148b9d8a919dbf8071cfc988887c886b3a9a4c1bc" %}
+{% set version = "0.13.0" %}
+{% set sha256 = "fb779e00285ee42a7939eda80d28276557ea705de4c75370f01ae218dd62dbe5" %}
 
 package:
   name: {{ name|lower }}
@@ -19,7 +19,7 @@ requirements:
     - toolchain
     - cmake
   run:
-    - xtensor >=0.10.2,<0.11
+    - xtensor >=0.11.0,<0.12
     - pybind11 >=2.1.0,<2.2
     - numpy
 
