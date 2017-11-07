@@ -1,6 +1,6 @@
 {% set name = "xtensor-python" %}
-{% set version = "0.14.0" %}
-{% set sha256 = "2583387fbe02c313ba9c032b37404cfd0f475421d4b0c05345dbaa32ba4f2d82" %}
+{% set version = "0.15.0" %}
+{% set sha256 = "c7c25b4a453053f6692355b05ff70783e147963054af7a8ffe321eb0e7a31b61" %}
 
 package:
   name: {{ name|lower }}
@@ -23,8 +23,8 @@ requirements:
     - pybind11
     - numpy
   run:
-    - xtl >=0.2.8,<0.3
-    - xtensor >=0.12.0,<0.13
+    - xtl >=0.3.3,<0.4
+    - xtensor >=0.13.1,<0.14
     - pybind11 >=2.1.0,<2.3
     - numpy
 
