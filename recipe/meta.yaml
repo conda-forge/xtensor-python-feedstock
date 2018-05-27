@@ -12,11 +12,12 @@ source:
     sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 1
+  skip: True  # [win and vc<14]
 
 requirements:
   build:
-    - toolchain
+    - {{ compiler('cxx') }}
     - cmake
     - xtl
     - xtensor
@@ -34,9 +35,10 @@ test:
     - test -f ${PREFIX}/include/xtensor-python/pyarray.hpp  # [unix]
     - test -f ${PREFIX}/lib/cmake/xtensor-python/xtensor-pythonConfig.cmake  # [unix]
     - test -f ${PREFIX}/lib/cmake/xtensor-python/xtensor-pythonConfigVersion.cmake  # [unix]
-    - if exist %LIBRARY_PREFIX%\include\xtensor-python\pyarray.hpp (exit 0) else (exit 1)  # [win]
-    - if exist %LIBRARY_PREFIX%\lib\cmake\xtensor-pythonConfig.cmake (exit 0) else (exit 1)  # [win]
-    - if exist %LIBRARY_PREFIX%\lib\cmake\xtensor-pythonConfigVersion.cmake (exit 0) else (exit 1)  # [win]
+    # TODO: replace with %PREFIX%\Library with %LIBRARY_PREFIX%
+    - if exist %PREFIX%\Library\include\xtensor-python\pyarray.hpp (exit 0) else (exit 1)  # [win]
+    - if exist %PREFIX%\Library\lib\cmake\xtensor-pythonConfig.cmake (exit 0) else (exit 1)  # [win]
+    - if exist %PREFIX%\Library\lib\cmake\xtensor-pythonConfigVersion.cmake (exit 0) else (exit 1)  # [win]
 
 about:
   home: http://quantstack.net/xtensor
