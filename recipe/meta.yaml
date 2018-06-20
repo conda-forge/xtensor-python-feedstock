@@ -1,6 +1,6 @@
 {% set name = "xtensor-python" %}
-{% set version = "0.18.0" %}
-{% set sha256 = "00981ef40d60f394b0a61f0f6bfd920114544ad15830eb31fefff9af470fed5a" %}
+{% set version = "0.19.0" %}
+{% set sha256 = "a7da3a31854ecefcdd91928fabfa77a79f6d72757efc5021ba507cc6fbd1f35d" %}
 
 package:
   name: {{ name|lower }}
@@ -35,10 +35,9 @@ test:
     - test -f ${PREFIX}/include/xtensor-python/pyarray.hpp  # [unix]
     - test -f ${PREFIX}/lib/cmake/xtensor-python/xtensor-pythonConfig.cmake  # [unix]
     - test -f ${PREFIX}/lib/cmake/xtensor-python/xtensor-pythonConfigVersion.cmake  # [unix]
-    # TODO: replace with %PREFIX%\Library with %LIBRARY_PREFIX%
-    - if exist %PREFIX%\Library\include\xtensor-python\pyarray.hpp (exit 0) else (exit 1)  # [win]
-    - if exist %PREFIX%\Library\lib\cmake\xtensor-pythonConfig.cmake (exit 0) else (exit 1)  # [win]
-    - if exist %PREFIX%\Library\lib\cmake\xtensor-pythonConfigVersion.cmake (exit 0) else (exit 1)  # [win]
+    - if exist %LIBRARY_PREFIX%\include\xtensor-python\pyarray.hpp (exit 0) else (exit 1)  # [win]
+    - if exist %LIBRARY_PREFIX%\lib\cmake\xtensor-pythonConfig.cmake (exit 0) else (exit 1)  # [win]
+    - if exist %LIBRARY_PREFIX%\lib\cmake\xtensor-pythonConfigVersion.cmake (exit 0) else (exit 1)  # [win]
 
 about:
   home: http://quantstack.net/xtensor
