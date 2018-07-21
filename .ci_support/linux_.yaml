@@ -1,0 +1,4 @@
+cxx_compiler:
+- toolchain_cxx
+numpy:
+- '1.9'
