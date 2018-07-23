@@ -12,16 +12,18 @@ source:
     sha256: {{ sha256 }}
 
 build:
-  number: 0
-  skip: True  # [win and vc<14]
+  number: 1
+  # Skipping all but one version of Python to avoid package duplication due to
+  # the build matrix generated for each Python version.
+  skip: True  # [win and vc<14 or not py36]
 
 requirements:
   build:
     - {{ compiler('cxx') }}
     - cmake
-    - xtl
-    - xtensor
-    - pybind11
+    - xtl >=0.4.9,<0.5
+    - xtensor >=0.16.0,<0.17
+    - pybind11 >=2.1.0,<2.3
     - numpy
   run:
     - xtl >=0.4.9,<0.5
