@@ -21,6 +21,7 @@ requirements:
   build:
     - {{ compiler('cxx') }}
     - cmake
+  host:
     - xtl >=0.4.9,<0.5
     - xtensor >=0.16.0,<0.17
     - pybind11 >=2.1.0,<2.3
