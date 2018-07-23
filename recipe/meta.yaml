@@ -19,15 +19,18 @@ requirements:
   build:
     - {{ compiler('cxx') }}
     - cmake
+  host:
     - xtl
     - xtensor
     - pybind11
+    - python
     - numpy
   run:
     - xtl >=0.4.9,<0.5
     - xtensor >=0.16.0,<0.17
     - pybind11 >=2.1.0,<2.3
     - numpy
+    - python
 
 test:
   commands:
