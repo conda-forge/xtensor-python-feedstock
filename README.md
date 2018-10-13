@@ -14,9 +14,9 @@ Multi dimensional arrays with broadcasting and lazy computing
 Current build status
 ====================
 
-![Linux disabled](https://img.shields.io/badge/linux-disabled-lightgrey.svg)
-![OSX disabled](https://img.shields.io/badge/OSX-disabled-lightgrey.svg)
-![Windows disabled](https://img.shields.io/badge/Windows-disabled-lightgrey.svg)
+[![Linux](https://img.shields.io/circleci/project/github/conda-forge/xtensor-python-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/xtensor-python-feedstock)
+[![OSX](https://img.shields.io/travis/conda-forge/xtensor-python-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/xtensor-python-feedstock)
+[![Windows](https://img.shields.io/appveyor/ci/conda-forge/xtensor-python-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/xtensor-python-feedstock/branch/master)
 
 Current release info
 ====================

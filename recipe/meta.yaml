@@ -15,7 +15,7 @@ build:
   number: 1000
   # Skipping all but one version of Python to avoid package duplication due to
   # the build matrix generated for each Python version.
-  skip: True  # [win and vc<14 or not py36]
+  skip: True  # [win and vc<14]
 
 requirements:
   build:
