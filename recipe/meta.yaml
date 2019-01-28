@@ -1,6 +1,6 @@
 {% set name = "xtensor-python" %}
-{% set version = "0.22.0" %}
-{% set sha256 = "fafb4a180f421f1a78c49a985b8e5393eb35f1696ce33962381085683862fcf8" %}
+{% set version = "0.22.1" %}
+{% set sha256 = "b92ce8979d54bd88e3613920208a13046f5944df6ada38711f4a89636c55304d" %}
 
 package:
   name: {{ name|lower }}
@@ -12,9 +12,7 @@ source:
     sha256: {{ sha256 }}
 
 build:
-  number: 1000
-  # Skipping all but one version of Python to avoid package duplication due to
-  # the build matrix generated for each Python version.
+  number: 0
   skip: True  # [win and vc<14]
 
 requirements:
