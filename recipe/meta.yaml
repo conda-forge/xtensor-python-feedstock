@@ -12,7 +12,7 @@ source:
     sha256: {{ sha256 }}
 
 build:
-  number: 1
+  number: 2
   skip: True  # [win and vc<14]
 
 requirements:
@@ -22,7 +22,7 @@ requirements:
   host:
     - xtl >=0.6.2,<0.7
     - xtensor >=0.20.4,<0.21
-    - pybind11 >=2.1.0,<2.3
+    - pybind11 >=2.1.0,<2.5
     - numpy
   run:
     - {{ pin_compatible('xtl', max_pin='x.x') }}
