@@ -12,7 +12,7 @@ source:
     sha256: {{ sha256 }}
 
 build:
-  number: 2
+  number: 3
   skip: True  # [win and vc<14]
 
 requirements:
@@ -23,13 +23,13 @@ requirements:
     - python
     - xtl >=0.6.9,<0.7
     - xtensor >=0.21.2,<0.22
-    - pybind11 >=2.4.3,<2.5
+    - pybind11 >=2.4.3,<3
     - numpy
   run:
     - python
     - {{ pin_compatible('xtl', max_pin='x.x') }}
     - {{ pin_compatible('xtensor', max_pin='x.x') }}
-    - {{ pin_compatible('pybind11', max_pin='x.x') }}
+    - {{ pin_compatible('pybind11', max_pin='x') }}
     - {{ pin_compatible('numpy') }}
 
 test:
@@ -38,9 +38,9 @@ test:
     - test -f ${PREFIX}/include/xtensor-python/pyarray.hpp  # [unix]
     - test -f ${PREFIX}/lib/cmake/xtensor-python/xtensor-pythonConfig.cmake  # [unix]
     - test -f ${PREFIX}/lib/cmake/xtensor-python/xtensor-pythonConfigVersion.cmake  # [unix]
-    - if not exist %LIBRARY_PREFIX%\include\xtensor-python\pyarray.hpp (exit 1)  # [win]
-    - if not exist %LIBRARY_PREFIX%\lib\cmake\xtensor-python\xtensor-pythonConfig.cmake (exit 1)  # [win]
-    - if not exist %LIBRARY_PREFIX%\lib\cmake\xtensor-python\xtensor-pythonConfigVersion.cmake (exit 1)  # [win]
+    - if exist %LIBRARY_PREFIX%\include\xtensor-python\pyarray.hpp (exit 0) else (exit 1)  # [win]
+    - if exist %LIBRARY_PREFIX%\lib\cmake\xtensor-pythonConfig.cmake (exit 0) else (exit 1)  # [win]
+    - if exist %LIBRARY_PREFIX%\lib\cmake\xtensor-pythonConfigVersion.cmake (exit 0) else (exit 1)  # [win]
 
 about:
   home: http://quantstack.net/xtensor
@@ -56,5 +56,3 @@ extra:
   recipe-maintainers:
     - SylvainCorlay
     - JohanMabille
-    - davidbrochart
-    - conda-forge/xtensor
