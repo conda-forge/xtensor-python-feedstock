@@ -12,7 +12,7 @@ source:
     sha256: {{ sha256 }}
 
 build:
-  number: 1
+  number: 2
   skip: True  # [win and vc<14]
 
 requirements:
@@ -38,9 +38,9 @@ test:
     - test -f ${PREFIX}/include/xtensor-python/pyarray.hpp  # [unix]
     - test -f ${PREFIX}/lib/cmake/xtensor-python/xtensor-pythonConfig.cmake  # [unix]
     - test -f ${PREFIX}/lib/cmake/xtensor-python/xtensor-pythonConfigVersion.cmake  # [unix]
-    - if exist %LIBRARY_PREFIX%\include\xtensor-python\pyarray.hpp (exit 0) else (exit 1)  # [win]
-    - if exist %LIBRARY_PREFIX%\lib\cmake\xtensor-pythonConfig.cmake (exit 0) else (exit 1)  # [win]
-    - if exist %LIBRARY_PREFIX%\lib\cmake\xtensor-pythonConfigVersion.cmake (exit 0) else (exit 1)  # [win]
+    - if not exist %LIBRARY_PREFIX%\include\xtensor-python\pyarray.hpp (exit 1)  # [win]
+    - if not exist %LIBRARY_PREFIX%\lib\cmake\xtensor-python\xtensor-pythonConfig.cmake (exit 1)  # [win]
+    - if not exist %LIBRARY_PREFIX%\lib\cmake\xtensor-python\xtensor-pythonConfigVersion.cmake (exit 1)  # [win]
 
 about:
   home: http://quantstack.net/xtensor
@@ -56,3 +56,4 @@ extra:
   recipe-maintainers:
     - SylvainCorlay
     - JohanMabille
+    - davidbrochart
