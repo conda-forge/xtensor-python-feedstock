@@ -5,9 +5,13 @@ Home: http://quantstack.net/xtensor
 
 Package license: BSD 3-Clause
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/xtensor-python-feedstock/blob/master/LICENSE.txt)
 
 Summary: Python bindings for xtensor, the C++ tensor algebra library
+
+Development: https://github.com/QuantStack/xtensor-python
+
+Documentation: http://xtensor.readthedocs.io
 
 Multi dimensional arrays with broadcasting and lazy computing
 
@@ -207,4 +211,5 @@ Feedstock Maintainers
 
 * [@JohanMabille](https://github.com/JohanMabille/)
 * [@SylvainCorlay](https://github.com/SylvainCorlay/)
+* [@davidbrochart](https://github.com/davidbrochart/)
 
