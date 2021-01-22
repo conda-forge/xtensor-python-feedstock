@@ -1,19 +1,19 @@
 {% set name = "xtensor-python" %}
-{% set version = "0.24.1" %}
-{% set sha256 = "e2e251721b9afd6f5229fec58be519179205b8d54bf0e2cd79aa97cacf0c9915" %}
+{% set version = "0.25.0" %}
+{% set sha256 = "c537c83bdc36f2e9252bba808475b0cf437d105c431597bf36c51435a57dd1a9" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-    fn: {{ name }}-{{ version }}.tar.gz
-    url: https://github.com/QuantStack/xtensor-python/archive/{{ version }}.tar.gz
-    sha256: {{ sha256 }}
+  fn: {{ name }}-{{ version }}.tar.gz
+  url: https://github.com/QuantStack/xtensor-python/archive/{{ version }}.tar.gz
+  sha256: {{ sha256 }}
 
 build:
-  number: 4
-  skip: True  # [win and vc<14]
+  number: 0
+  skip: true  # [win and vc<14]
 
 requirements:
   build:
@@ -51,8 +51,8 @@ about:
   license: BSD 3-Clause
   license_family: BSD
   license_file: LICENSE
-  summary: 'Python bindings for xtensor, the C++ tensor algebra library'
-  description: 'Multi dimensional arrays with broadcasting and lazy computing'
+  summary: Python bindings for xtensor, the C++ tensor algebra library
+  description: Multi dimensional arrays with broadcasting and lazy computing
   doc_url: http://xtensor.readthedocs.io
   dev_url: https://github.com/QuantStack/xtensor-python
 
