@@ -1,6 +1,6 @@
 {% set name = "xtensor-python" %}
-{% set version = "0.24.1" %}
-{% set sha256 = "e2e251721b9afd6f5229fec58be519179205b8d54bf0e2cd79aa97cacf0c9915" %}
+{% set version = "0.25.0" %}
+{% set sha256 = "c537c83bdc36f2e9252bba808475b0cf437d105c431597bf36c51435a57dd1a9" %}
 
 package:
   name: {{ name|lower }}
@@ -12,7 +12,7 @@ source:
     sha256: {{ sha256 }}
 
 build:
-  number: 4
+  number: 0
   skip: True  # [win and vc<14]
 
 requirements:
@@ -25,8 +25,8 @@ requirements:
     - cmake
   host:
     - python
-    - xtl >=0.6.9,<0.7
-    - xtensor >=0.21.2,<0.22
+    - xtl >=0.7,<0.8
+    - xtensor >=0.23.0,<0.24
     - pybind11 >=2.4.3,<3
     - numpy
   run:
