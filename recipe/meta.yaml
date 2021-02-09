@@ -1,6 +1,6 @@
 {% set name = "xtensor-python" %}
-{% set version = "0.25.0" %}
-{% set sha256 = "c537c83bdc36f2e9252bba808475b0cf437d105c431597bf36c51435a57dd1a9" %}
+{% set version = "0.25.1" %}
+{% set sha256 = "1e70db455a4dcba226c450bf9261a05a0c2fad513b84be35a3d139067356e6a1" %}
 
 package:
   name: {{ name|lower }}
@@ -48,7 +48,7 @@ test:
 
 about:
   home: http://quantstack.net/xtensor
-  license: BSD 3-Clause
+  license: BSD-3-Clause
   license_family: BSD
   license_file: LICENSE
   summary: 'Python bindings for xtensor, the C++ tensor algebra library'
