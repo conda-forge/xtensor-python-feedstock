@@ -23,6 +23,7 @@ requirements:
     - pybind11                               # [build_platform != target_platform]
     - {{ compiler('cxx') }}
     - cmake
+    - make                                   # [unix]
   host:
     - python
     - xtl >=0.7,<0.8
