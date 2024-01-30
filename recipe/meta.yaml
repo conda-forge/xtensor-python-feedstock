@@ -10,10 +10,10 @@ source:
     url: https://github.com/xtensor-stack/xtensor-python/archive/{{ version }}.tar.gz
     sha256: 40ee01bd213aeb7bf64f6d8a3257f4fa98ed31c401596c6c7b3b115f61a473b9
     patches:
-      - patches/find_numpy.patch
+      - patches/0001-find_numpy.patch
 
 build:
-  number: 0
+  number: 1
   skip: True  # [win and vc<14]
 
 requirements:
