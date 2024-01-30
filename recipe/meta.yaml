@@ -1,19 +1,19 @@
 {% set name = "xtensor-python" %}
-{% set version = "0.26.1" %}
-{% set sha256 = "eb64155c6824be471decf93927beedae3645714c8ce92f38e037434db2c2454a" %}
+{% set version = "0.27.0" %}
+{% set sha256 = "40ee01bd213aeb7bf64f6d8a3257f4fa98ed31c401596c6c7b3b115f61a473b9" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-    fn: {{ name }}-{{ version }}.tar.gz
-    url: https://github.com/xtensor-stack/xtensor-python/archive/{{ version }}.tar.gz
-    sha256: {{ sha256 }}
+  fn: {{ name }}-{{ version }}.tar.gz
+  url: https://github.com/xtensor-stack/xtensor-python/archive/{{ version }}.tar.gz
+  sha256: {{ sha256 }}
 
 build:
-  number: 2
-  skip: True  # [win and vc<14]
+  number: 0
+  skip: true  # [win and vc<14]
 
 requirements:
   build:
