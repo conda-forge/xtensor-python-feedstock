@@ -13,7 +13,7 @@ source:
       - patches/0001-find_numpy.patch
 
 build:
-  number: 1
+  number: 2
   skip: True  # [win and vc<14]
 
 requirements:
@@ -23,6 +23,7 @@ requirements:
     - numpy                                  # [build_platform != target_platform]
     - pybind11                               # [build_platform != target_platform]
     - {{ compiler('cxx') }}
+    - {{ stdlib("c") }}
     - cmake
     - make                                   # [unix]
   host:
@@ -36,7 +37,6 @@ requirements:
     - {{ pin_compatible('xtl', max_pin='x.x') }}
     - {{ pin_compatible('xtensor', max_pin='x.x') }}
     - {{ pin_compatible('pybind11', max_pin='x') }}
-    - {{ pin_compatible('numpy') }}
 
 test:
   commands:
