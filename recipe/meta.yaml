@@ -1,5 +1,5 @@
 {% set name = "xtensor-python" %}
-{% set version = "0.27.0" %}
+{% set version = "0.28.0" %}
 
 package:
   name: {{ name|lower }}
@@ -8,12 +8,10 @@ package:
 source:
     fn: {{ name }}-{{ version }}.tar.gz
     url: https://github.com/xtensor-stack/xtensor-python/archive/{{ version }}.tar.gz
-    sha256: 40ee01bd213aeb7bf64f6d8a3257f4fa98ed31c401596c6c7b3b115f61a473b9
-    patches:
-      - patches/0001-find_numpy.patch
+    sha256: 3be09f2bc284e5a468937ad411a9976f9ab7ea5d0df40f5b1964a3694e7ee931
 
 build:
-  number: 3
+  number: 0
   skip: True  # [win and vc<14]
 
 requirements:
@@ -28,8 +26,8 @@ requirements:
     - make                                   # [unix]
   host:
     - python
-    - xtl >=0.7,<0.8
-    - xtensor >=0.25.0,<0.26
+    - xtl >=0.8,<0.9
+    - xtensor >=0.26.0,<0.27
     - pybind11 >=2.12.0,<3
     - numpy
   run:
