@@ -44,8 +44,8 @@ tests:
       files:
         exists:
           - ${{ "Library/" if win }}include/xtensor-python/pyarray.hpp
-          - ${{ "Library/" if win }}lib/cmake/xtensor-python/xtensor-pythonConfig.cmake
-          - ${{ "Library/" if win }}lib/cmake/xtensor-python/xtensor-pythonConfigVersion.cmake
+          - ${{ "Library/" if win }}share/cmake/xtensor-python/xtensor-pythonConfig.cmake
+          - ${{ "Library/" if win }}share/cmake/xtensor-python/xtensor-pythonConfigVersion.cmake
 
 about:
   homepage: https://github.com/xtensor-stack/xtensor-python
